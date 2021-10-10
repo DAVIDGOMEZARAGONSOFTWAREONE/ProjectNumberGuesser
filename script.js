@@ -2,11 +2,13 @@ let humanScore = 0;
 let computerScore = 0;
 let currentRoundNumber = 1;
 
+// Genera el número secreto
 function generateTarget(){
     let secretNumber=Math.floor(Math.random() * 9) + 0;
     return secretNumber;
 }
 
+// Encontrar al ganador
 function compareGuesses(currentHumanGuess,computerGuess,target){
 
     let victoria;
@@ -21,6 +23,7 @@ function compareGuesses(currentHumanGuess,computerGuess,target){
     return victoria;
 }
 
+// Actualizar puntuación
 function updateScore(winner){
 
     if (winner=="human")humanScore++;
@@ -28,8 +31,7 @@ function updateScore(winner){
 
 }
 
+// Avanzar de ronda
 function advanceRound(){
     currentRoundNumber++;
 }
-
-
